@@ -70,7 +70,7 @@ h3, h4, h5{
 }
 
 footer{
-    background-color:#363636;
+    background-color:#80125b;
 }
 aside p,h3,h4{
     background-color:lightgray;
@@ -105,7 +105,6 @@ a{font-size:15px;}
 
 footer>p{
     width:250px;
-
     margin-left:auto;
     margin-right:auto;
     color:white;
@@ -148,7 +147,7 @@ footer>p{
   
   /* Add a red background color to navbar links on hover */
   .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
+    background-color: rgb(0, 255, 85);
   }
   
   /* Dropdown content (hidden by default) */
@@ -183,7 +182,7 @@ footer>p{
 
   .bg-img {
     /* The image used */
-    background-image: url("https://camosun.ca/sites/default/files/styles/responsive_1280/public/2021-01/young-woman-reaching-book-library-2_0.jpg?itok=bYVpbHAa");
+    background-image: url("https://images.squarespace-cdn.com/content/v1/5dce8dc56042ec2efabc6c7b/1582222618676-09Z0PH64HI0JDY3F0BC5/RGU+1.png");
   
     min-height: 380px;
   
@@ -208,20 +207,15 @@ footer>p{
   #wrapper {
     display:flex;
     flex-wrap:wrap;
-    width:1040px;
-    height:200px;
+    width:px;
+    height:400px;
   }
   
   .box {
-    background-color:purple;
+    background-color:white;
     border:1px solid black;
-    min-width:7%;
+    min-width:30%;
     flex:1 1 auto;
-    text-align: center;
-    
     }
-    p{color:white;}
-
-
 
   
