@@ -1,0 +1,77 @@
+img{
+    max-width:100%;
+    max-height: 435px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
+form{
+    width: 600px;
+    
+}
+#navbar {
+    overflow: hidden;
+    background-color: rgb(221, 20, 221);
+    border: 10px;
+    border-color: aliceblue;
+    list-style-type: none;
+}
+#navbar a{
+float: left;
+display: block;
+color:aliceblue;
+text-align: center;
+padding: 15px;
+
+}
+
+#navbar a:hover{
+    background-color: blueviolet;
+    color:white;
+}
+
+body{
+    color:violet;
+   
+
+}
+
+#loginbtn{
+    background-color:rgb(221, 20, 221);
+    color:aliceblue;
+}
+#title{
+    background-color: rgb(221, 45, 221);
+    color: aliceblue;
+    border-top: 60px;
+}
+#bigbit{
+    background-color: rgb(230, 125, 241);
+}
+#copyright{
+    color:aliceblue;
+}
+#signupbtn{
+    background-color:rgb(14, 204, 30);
+    color:aliceblue;
+    width: 550px;
+}
+#forgotbtn{
+    width:450px;
+    background-color:blue;
+    color: aliceblue;
+    position: center;
+    margin:auto;
+}
+
+#updatemessage{
+
+    color:aliceblue;
+    background-color:blue;
+    width: 200px;
+    text-align: center;
+    position: center;
+    margin:auto;
+    margin-bottom: 10px;;
+}

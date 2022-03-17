@@ -1,0 +1,21 @@
+#singupfail{
+    background-color: red;
+    color: red;
+    text-align: center;
+  }
+#reset-title{
+    color: black;
+    text-decoration: underline;
+}
+#resetemail{
+    width: 250px;
+}
+body{
+    background-color:rgb(216, 105, 216);
+}
+
+#reset-request-submit{
+    background-color: blue;
+    color: white;
+    border-color: blue;
+}
