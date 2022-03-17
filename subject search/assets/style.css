@@ -1,0 +1,235 @@
+/*@import "templatecolours.css";*/
+
+body{
+    max-width:1040px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+header{ float: inline-start;
+
+}
+nav>ul{
+
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+}
+nav>ul>li{
+    float:left;
+    padding-bottom:10px;
+}
+nav ul li a{
+
+    display:block;
+    color: black;
+    text-align:center;
+    padding:10px 30px;
+    text-decoration: none;
+}
+li a:hover{color: black;}
+
+
+
+#hos{
+    width:300px;
+    padding-right:10px;
+}
+
+#cslogo{
+    width:150px;
+    padding-right:10px;
+    margin:10px;
+}
+#txlogo{
+    text-align: center;
+}
+
+h1{
+    font-family:'Roberto', sans-serif;
+    font-weight:300;
+    padding-bottom:10px;
+
+}
+h2{
+     font-family:'Roberto', sans-serif;
+     font-weight:300;
+     padding-bottom:10px;
+    text-align:center;
+
+ }
+
+p, h2, h3, h4, h5, a{
+    font-family:'Roberto', sans-serif;
+    font-weight:400;
+}
+h3, h4, h5{
+    font-family:'Roberto', sans-serif;
+    font-weight:700;
+}
+
+footer{
+    background-color:#363636;
+}
+aside p,h3,h4{
+    background-color:lightgray;
+    color:white;
+}
+aside p,h3,h4{
+    margin:0;
+}
+aside h4{
+    padding-top:10px;
+    padding-left:10px;
+    padding-right:10px;
+}
+aside p{
+    padding-top:20px;
+    padding-left:10px;
+    padding-right:0px;
+    padding-bottom:8px;
+}
+
+aside {
+    padding-right:0px !important;
+    padding-top:-5px !important;
+}
+
+h1{font-size:40px;}
+h2{font-size:18px;}
+h3{font-size:16px;}
+h4{font-size:14px;}
+p{font-size:14px;}
+a{font-size:15px;}
+
+
+/* Navbar container */
+.navbar {
+    overflow: hidden;
+    
+    font-family: Arial;
+  }
+  
+  /* Links inside the navbar */
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border: 1px solid;
+    background-color:purple;
+  }
+  
+  /* The dropdown container */
+  .dropdown {
+    float: right;
+    overflow: hidden;
+  }
+  
+  /* Dropdown button */
+  .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+  
+  /* Add a red background color to navbar links on hover */
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(0, 255, 98);
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  /* Add a grey background color to dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: rgb(248, 242, 242);
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .bg-img {
+    /* The image used */
+    background-image: url("https://th.bing.com/th/id/R.99f586a286869ddc8abcebd963e1e03d?rik=jCXEwb9nVK%2bBXQ&riu=http%3a%2f%2f4.bp.blogspot.com%2f-YOK5lxMFhcU%2fVAg3o3sGw-I%2fAAAAAAAACpE%2fYoPkQz_eHlk%2fs1600%2flibrary_books.jpg&ehk=81GIST1egxMiS7UY9b8V43pY1kB6OonQxr4afHuMtwg%3d&risl=&pid=ImgRaw&r=0");
+  
+    min-height: 380px;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    /* Needed to position the navbar */
+    position: relative;
+  }
+
+
+
+ 
+  .dropdowne {
+
+    float: right;
+    overflow:hidden ;
+
+  }
+  #wrapper {
+    display:flex;
+    flex-wrap:wrap;
+    width:1040px;
+    height:150px;
+  }
+  
+  .box {
+    background-color:rgb(107, 17, 107);
+    color: white;
+    border:1px solid white;
+    min-width:8%;
+    flex:1 1 auto;
+    text-align: center;
+    
+    }
+    p{color:white;}
+
+
+    footer>p{
+      text-indent: 4em;
+      width:auto;
+      background-color: purple;
+text-align: center;
+      margin-left:auto;
+      margin-right:auto;
+      color:rgb(250, 245, 249);
+    }
+    
+
+    
+
+  
