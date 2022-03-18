@@ -1,3 +1,17 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "cmm004_login";
+
+//Create connection
+$conn = new mysqli("localhost","root","","cmm004_login");
+
+// Check connection
+if ($conn->connect_error) {
+  die("connection failed:" . $conn->connect_error);
+}
+echo "connected successfully";
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -46,114 +60,185 @@
 
 <div id='wrapper'>
   <div class='box'>
-    
-    <a href = C:\Users\mojis\Desktop\GROUP-E-004\CMM004 Homepage\a_search.html>A</a>
+    A
+    <p>Andrew</p>
+    <p>Andrew</p>
+    <p>Andrew</p>
   </div>
   <div class='box'>
     
-    
-    <a href = C:\Users\mojis\Desktop\GROUP-E-004\CMM004 Homepage>B</a>
+    B
+    <p>Biology</p>
+    <p>Biographs</p>
+    <p>Biopsy</p>
   </div>
   <div class='box'>
     
-    <a href = C:\Users\mojis\Desktop\GROUP-E-004\CMM004 Homepage>C</a>
+    C
+    <p>Cats</p>
+    <p>Casting</p>
+    <p>Cargo</p>
   </div>
   <div class='box'>
     
-    <a href = C:\Users\mojis\Desktop\GROUP-E-004\CMM004 Homepage>D</a>
+    D
+    <p>Digits</p>
+    <p>Datasets</p>
+    <p>Drama</p>
   </div>
   <div class='box'>
     
-    <a href = C:\Users\mojis\Desktop\GROUP-E-004\CMM004 Homepage>E</a>
+    E
+    <p>Empathy</p>
+    <p>Encomium</p>
+    <p>Entertainment</p>
   </div>
   <div class='box'>
     
-    <a href = C:\Users\mojis\Desktop\GROUP-E-004\CMM004 Homepage>F</a>
+    F
+    <p>Fundings</p>
+    <p>Funerals</p>
+    <p>Functions</p>
   </div>
   <div class='box'>
   
-    <a href = C:\Users\mojis\Desktop\GROUP-E-004\CMM004 Homepage>G</a>
+    G
+    <p>Andrew</p>
+    <p>Andrew</p>
+    <p>Andrew</p>
   </div>
   <div class='box'>
     
-    <a href = C:\Users\mojis\Desktop\GROUP-E-004\CMM004 Homepage>G</a>
+    H
+    <p>Andrew</p>
+    <p>Andrew</p>
+    <p>Andrew</p>
   </div>
   <div class='box'>
     
-    <a href = C:\Users\mojis\Desktop\GROUP-E-004\CMM004 Homepage>H</a>
+    I
+    <p>Andrew</p>
+    <p>Andrew</p>
+    <p>Andrew</p>
   </div>
   <div class='box'>
     
-    <a href = C:\Users\mojis\Desktop\GROUP-E-004\CMM004 Homepage>I</a>
+    J
+    <p>Andrew</p>
+    <p>Andrew</p>
+    <p>Andrew</p>
   </div>
   <div class='box'>
     
-    <a href = C:\Users\mojis\Desktop\GROUP-E-004\CMM004 Homepage>J</a>
+    K
+    <p>Andrew</p>
+    <p>Andrew</p>
+    <p>Andrew</p>
   </div>
   <div class='box'>
     
-    <a href = C:\Users\mojis\Desktop\GROUP-E-004\CMM004 Homepage>K</a>
+    L
+    <p>Andrew</p>
+    <p>Andrew</p>
+    <p>Andrew</p>
   </div>
   <div class='box'>
   
-    <a href = C:\Users\mojis\Desktop\GROUP-E-004\CMM004 Homepage>L</a>
+    M
+    <p>Andrew</p>
+    <p>Andrew</p>
+    <p>Andrew</p>
   </div>
   <div class='box'>
     
-    <a href = C:\Users\mojis\Desktop\GROUP-E-004\CMM004 Homepage>M</a>
+    N
+    <p>Andrew</p>
+    <p>Andrew</p>
+    <p>Andrew</p>
   </div>
   <div class='box'>
     
-    <a href = C:\Users\mojis\Desktop\GROUP-E-004\CMM004 Homepage>N</a>
+    O
+    <p>Andrew</p>
+    <p>Andrew</p>
+    <p>Andrew</p>
   </div>
   <div class='box'>
     
-    <a href = C:\Users\mojis\Desktop\GROUP-E-004\CMM004 Homepage>O</a>
+    P
+    <p>Andrew</p>
+    <p>Andrew</p>
+    <p>Andrew</p>
   </div>
   <div class='box'>
     
-    <a href = C:\Users\mojis\Desktop\GROUP-E-004\CMM004 Homepage>P</a>
+    Q
+    <p>Andrew</p>
+    <p>Andrew</p>
+    <p>Andrew</p>
   </div>
   <div class='box'>
     
-    <a href = C:\Users\mojis\Desktop\GROUP-E-004\CMM004 Homepage>Q</a>
+    R
+    <p>Andrew</p>
+    <p>Andrew</p>
+    <p>Andrew</p>
   </div>
   <div class='box'>
   
-    <a href = C:\Users\mojis\Desktop\GROUP-E-004\CMM004 Homepage>R</a>
+    S
+    <p>Andrew</p>
+    <p>Andrew</p>
+    <p>Andrew</p>
   </div>
   <div class='box'>
     
-    <a href = C:\Users\mojis\Desktop\GROUP-E-004\CMM004 Homepage>S</a>
+    T
+    <p>Andrew</p>
+    <p>Andrew</p>
+    <p>Andrew</p>
   </div>
   <div class='box'>
     
-    <a href = C:\Users\mojis\Desktop\GROUP-E-004\CMM004 Homepage>T</a>
+    U
+    <p>Andrew</p>
+    <p>Andrew</p>
+    <p>Andrew</p>
   </div>
   <div class='box'>
     
-    <a href = C:\Users\mojis\Desktop\GROUP-E-004\CMM004 Homepage>U</a>
+    V
+    <p>Andrew</p>
+    <p>Andrew</p>
+    <p>Andrew</p>
   </div>
   <div class='box'>
     
-    <a href = C:\Users\mojis\Desktop\GROUP-E-004\CMM004 Homepage>V</a>
+    W
+    <p>Andrew</p>
+    <p>Andrew</p>
+    <p>Andrew</p>
   </div>
   <div class='box'>
     
-    <a href = C:\Users\mojis\Desktop\GROUP-E-004\CMM004 Homepage>W</a>
+    X
+    <p>Andrew</p>
+    <p>Andrew</p>
+    <p>Andrew</p>
   </div>
   <div class='box'>
   
-    <a href = C:\Users\mojis\Desktop\GROUP-E-004\CMM004 Homepage>X</a>
-  </div>
-  <div class='box'>
-
-    <a href = C:\Users\mojis\Desktop\GROUP-E-004\CMM004 Homepage>Y</a>
+    Y
+    <p>Andrew</p>
+    <p>Andrew</p>
+    <p>Andrew</p>
   </div>
   <div class='box'>
     
-    <a href = C:\Users\mojis\Desktop\GROUP-E-004\CMM004 Homepage>Z</a>
-  </div>
+    Z
+    <p>Andrew</p>
+    <p>Andrew</p>
+    <p>Andrew</p>
   </div>
  
 </div>
