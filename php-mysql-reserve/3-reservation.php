@@ -5,6 +5,12 @@
     <link href="3-theme.css" rel="stylesheet">
     </script>
   </head>
+  <style>
+  .body{
+    background-color: purple;
+  }
+
+  </style>
   <body>
     <?php
     // (A) PROCESS RESERVATION
