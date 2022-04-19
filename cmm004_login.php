@@ -1,42 +1,48 @@
 
 <?php
 error_reporting(0);
-@ini_set('display_errors', 0);
+@ini_set('display_errors', 0);//error hider
   session_start();
+  if(isset($_SESSION["lock"])){
+    $ban=time() - $_SESSION["lock"]; //variable ban will measure how long the user has been banned from the site.
+    if ($ban > 10) //10 for testing. Change to 600 for 10 minutes
+    {
+      unset($_SESSION["lock"]);
+      unset($_SESSION["attempts"]);
+    }
+  }
+  $conn = new mysqli("localhost","root","","coursecorrect");
 
-  $conn = new mysqli("localhost","root","","cmm004_login");
-
-  $msg="";
 
     if(isset($_POST['login'])){
       $username = $_POST['username'];
       $password = $_POST['password'];
-      $password = sha1($password); 
+      $password = $password; 
       $user_type = $_POST['user_type'];
 
-      $sql = "SELECT * FROM login_course_correct WHERE username=? AND password=? AND user_type=?";
+      $sql = "SELECT * FROM login WHERE username=? AND password=? AND user_type=?";
       $stmt=$conn->prepare($sql);
-      $stmt->bind_param("sss",$username,$password,$user_type);
+    $stmt->bind_param("sss",$username,$password,$user_type);
       $stmt->execute();
       $result = $stmt->get_result();
       $row = $result->fetch_assoc();
 
-      session_regenerate_id();
+      session_regenerate_id(); //This should replace current session ID with a new one and keep current information 
       $_SESSION['username'] = $row['username'];
       $_SESSION['role'] = $row['user_type'];
-      session_write_close();
+      
 
       if($result->num_rows==1 && $_SESSION['role']=="student"){
-        header("location:student.php");
+        header("location:studenthome.php");
       }
-      else if($result->num_rows==1 && $_SESSION['role']=="teacher"){
-        header("location:teacher.php");
-      }
+     
       else if($result->num_rows==1 && $_SESSION['role']=="admin"){
-        header("location:admin.php");
+        header("location:adminhome.php");
       }
       else{
-       $msg = "Details entered incorrect!";
+       $_SESSION["attempts"] += 1;
+       
+      echo '<script>alert("Details Entered were Incorrect")</script>';
       } 
 }   
 ?>
@@ -57,7 +63,7 @@ error_reporting(0);
 
 <body class id="bigbit">
 <aside class="grid-33" id="photo_slot">
-      <img src="ProjectImages\login_image.jpg.png">
+      <img src="assets/images/login_image.jpg">
 </aside>
   <main class="grid-container">
   <section class="grid-66">  
@@ -65,33 +71,52 @@ error_reporting(0);
         <div class="row justify-content-center">
             <div class="col-lg- bg-light mt-5 px-0">
                 <h3 class="text-center text-light p-3" id="title">Course Correct Login System</h3>
-                <form action= "<?= $_SERVER['PHP_SELF'] ?>" method="post" class="p-4">
+                <?php if (isset($_SESSION["error"])) { ?>
+                  <p> <?php $_SESSION["error"];}?> </p>
+                <?php ?> <!-- check if we need this  its just dusplaying the error but might already do that-->
+                <form action= "<?= $_SERVER['PHP_SELF'] ?>" method="post" class="p-4"><!-- check this -->
                 <div class="form-group">
         <input type="text" name="username" class="form-control form control-lg" placeholder="Username" required>
       </div>     
                 <div class="form-group">
                         <input type="password" name="password" class="form-control form-control-lg" placeholder="Password" required>
                     </div>
-                    <div class="form-group">
-                       <label for="user_type">I'm a :</label>
-                      <input type="radio" name="user_type" value="student" class="custom-radio" required>&nbsp;Student | 
-                     <input type="radio" name="user_type" value="staff" class="custom-radio" required>&nbsp;Staff | 
-                     <input type="radio" name="user_type" value="admin" class="custom-radio" required>&nbsp;Admin |
-                    </div>
+                   
                     <div class="form group">
-                      <input type="submit" name="login" class="btn 
-                       btn-block" id="loginbtn" value="Login"> 
+                      <?php 
+                        if ($_SESSION["attempts"] > 2){
+                          $_SESSION["lock"] =time();
+                          echo "Too many failed attempts. Please try again after 10 minutes";
+                        } else{
+
+                      ?>
+                      <br>
+                      <br>
+                            <input type="submit" name="login" class="btn btn-block" id="loginbtn" value="Login">
+                      <?php }?>    
+                       <br>
+                       <br>
+                      <input type="submit" class="btn btn-block" onclick="location.href='passwordretrieval.php';" id="forgotbtn" value="Forgotten Password?" >
+
                      </div>
                      <br>
-                     <b> Do you have an account? If not, then sign up </b>
+                    
                      <br>
                      <br>
                      <div>
-                     <input type="submit" class="btn btn-block" onclick="location.href='signup.php';" value="Sign Up" id="signupbtn">
                     </div>
-                     <h5 class="text-danger text center"><?= $msg; ?></h5>
                 </form>
-               
+               <?php
+              
+           
+            if(isset($_GET["newpwd"])){
+               if($_GET["newpwd"] == "passwordupdated"){
+                   echo '<h5 id=updatemessage>Password Updated</h5>';
+           
+               }
+              }
+           ?>
+              
                 
             </div> 
         </div>  
@@ -103,12 +128,12 @@ error_reporting(0);
     <br>
     <footer>
       <div id="navbar">
-          <a href="term_conditions.php" > Terms & Conditions </a>
-          <a href="aboutus.php" > About Us</a>
-          <a href="help.php"> Help </a>
-          <a id="copyright" > Copyright</a>
-          <a href="faq.php" > FAQ </a> 
-          <a href="contactus.php"> Contact us </a>
+          <a href="extras/term_conditions.php" > Terms & Conditions </a>
+          <a href="extras/aboutus.php" > About Us</a>
+          <a href="extras/help.php"> Help </a>
+          <a id="extras/copyright" > Copyright</a>
+          <a href="extras/faq.php" > FAQ </a> 
+          <a href="extras/contactform.php"> Contact us </a>
 </div>
 </footer>
 
@@ -117,4 +142,3 @@ error_reporting(0);
 
 
 </html>
- 
