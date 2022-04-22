@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add a book</title>
+  <link rel="stylesheet" href="../A-Z Search/assets/style.css">
+  <link rel="stylesheet" href="../A-Z Search/assets/unsemantic-grid-responsive-tablet.css">
+</head>
+
+<body>
+  <!--START OF HEADER-->
+  <header>
+    <div class="topheader">
+      <img id="rgu_logo" src="../A-Z Search/assets/images/rgulib.png" alt="Robert Gordon University">
+
+      <div class="dropdowne">
+        <button onclick="myFunction()" class="dropbtn">StudentNumber</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#">Profile</a>
+          <a href="#">Logout</a>
+          <a href="#">Settings</a>
+        </div>
+      </div>
+    </div>
+
+    <nav>
+      <div class="navbar">
+        <a href="admin_home.html">Home</a>
+        <a href="booksearch.html">Search Books</a>
+
+        <div class="dropdown">
+          <button class="dropbtn">Add/Remove Computer
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="addcomputer.html">Add Computer</a>
+            <a href="deletecomputer.php">Remove Computer</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn">Add/Remove Study Space
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Add Study Space</a>
+            <a href="#">Remove Study Space</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn">Add/Remove Books
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="add_book.html">Add Books</a>
+            <a href="deletebooks.php">Remove Books</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <h1 class="title">Add a book</h1>
+    <!--Once the form is submitted, all the form data is forwarded to addbooks.php -->
+    <form class="addbook" action="addbooks.php" method="post">
+      <ul>
+        <li>
+          <label for="name">ISBN: <span class="red">*</span></label>
+          <input type="text" id="isbn" name="isbn" required />
+        </li>
+        <li>
+          <label for="name">Title: <span class="red">*</span></label>
+          <input type="text" id="title" name="title" required />
+        </li>
+        <li>
+          <label for="name">Author: <span class="red">*</span></label>
+          <input type="text" id="author" name="author" required />
+        </li>
+        <li>
+          <label for="name">Publisher: <span class="red">*</span></label>
+          <input type="text" id="publisher" name="publisher" required />
+        </li>
+        <li>
+          <label for="name">Year published: <span class="red">*</span></label>
+          <input type="text" id="year_publish" name="year_publish" required />
+        </li>
+        <li>
+          <label for="name">Genre: <span class="red">*</span></label>
+          <input type="text" id="genre" name="genre" required />
+        </li>
+      </ul>
+      <button type="submit">Add book</button>
+    </form>
+  </main>
+
+  <!--START OF FOOTER-->
+  <footer>
+    <div class="footer">
+      <span>(c) 2022 Group E</span>
+      <span><a href="../Features/privacy.html">Privacy & Cookie Statement</a></span>
+    </div>
+  </footer>
+  <!--END OF FOOTER-->
+</body>
+
+</html>
